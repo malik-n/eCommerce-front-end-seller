@@ -27,6 +27,7 @@ const Login = () => {
         },
       });
       console.log("result", result.data);
+      localStorage.setItem("token", result.data.token);
       return navigate("/", { state: { isLoggedIn: true } });
     } catch {
       console.error("something went wrong");

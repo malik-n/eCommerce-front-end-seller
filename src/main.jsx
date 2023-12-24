@@ -71,15 +71,22 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+const defaultOptions = {
+  watchQuery: {
+    fetchPolicy: "no-cache",
+    errorPolicy: "ignore",
+  },
+  query: {
+    fetchPolicy: "no-cache",
+    errorPolicy: "all",
+  },
+};
+
 const client = new ApolloClient({
   link: authLink.concat(link),
   cache: new InMemoryCache(),
+  defaultOptions: defaultOptions,
 });
-
-// const client = new ApolloClient({
-//   cache: new InMemoryCache(),
-//   link: link,
-// });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

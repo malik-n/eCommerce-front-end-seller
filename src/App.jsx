@@ -42,7 +42,7 @@ const App = () => {
   return (
     <div>
       <Hero />
-      {/* {notification ? (
+      {notification ? (
         <p>
           Logged in Successfully <sup onClick={handleClose}>x</sup>
         </p>
@@ -51,7 +51,7 @@ const App = () => {
           <p>Notification closed. </p>
           <p onClick={handleNotification}>Show notification</p>
         </div>
-      )} */}
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 //   let location = useLocation(false);
 
@@ -90,6 +91,12 @@ function Navbar() {
             </Box>
           </Toolbar>
         </Container>
+        <Link to="/login">
+          <Button variant="contained">Login</Button>
+        </Link>
+        <Link to="/signup">
+          <Button variant="contained">SignUp</Button>
+        </Link>
       </AppBar>
     </>
   );
